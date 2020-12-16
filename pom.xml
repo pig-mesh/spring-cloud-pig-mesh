@@ -29,7 +29,8 @@
 
 	<modules>
 		<module>spring-cloud-pig-mesh-dependencies</module>
-		<module>spring-cloud-starter-pig-mesh-discovery</module>
+		<module>spring-cloud-starter-pig-mesh-discovery-client</module>
+		<module>spring-cloud-starter-pig-mesh-discovery-server</module>
 	</modules>
 
 	<dependencyManagement>

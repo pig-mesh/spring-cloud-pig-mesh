@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<artifactId>spring-cloud-starter-pig-mesh-discovery</artifactId>
-	<name>spring-cloud-starter-pig-mesh-discovery</name>
-	<description>服务发现</description>
+	<artifactId>spring-cloud-starter-pig-mesh-discovery-server</artifactId>
+	<name>spring-cloud-starter-pig-mesh-discovery-server</name>
+	<description>服务发现服务端</description>
 
 	<properties>
 		<java.version>11</java.version>
