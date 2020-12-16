@@ -17,12 +17,42 @@
 	<description>Pig Mesh Dependencies</description>
 
 	<properties>
-
+		<hutool.version>5.5.3</hutool.version>
+		<hutool.version>5.5.3</hutool.version>
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
+			<!-- 网络调用依赖 -->
+			<dependency>
+				<groupId>cn.hutool</groupId>
+				<artifactId>hutool-http</artifactId>
+				<version>${hutool.version}</version>
+			</dependency>
+			<!--json 处理-->
+			<dependency>
+				<groupId>cn.hutool</groupId>
+				<artifactId>hutool-json</artifactId>
+				<version>${hutool.version}</version>
+			</dependency>
+			<!-- discovery-common -->
+			<dependency>
+				<groupId>com.pig4cloud.cloud</groupId>
+				<artifactId>spring-cloud-pig-mesh-discovery-common</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 
+			<dependency>
+				<groupId>com.pig4cloud.cloud</groupId>
+				<artifactId>spring-cloud-starter-pig-mesh-discovery-server</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.pig4cloud.cloud</groupId>
+				<artifactId>spring-cloud-starter-pig-mesh-discovery-client</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 

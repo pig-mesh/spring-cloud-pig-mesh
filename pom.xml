@@ -20,6 +20,10 @@
 
 	<properties>
 		<java.version>11</java.version>
+		<compile.version>11</compile.version>
+		<project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
+		<lombok.version>1.18.16</lombok.version>
 	</properties>
 
 	<organization>
@@ -29,9 +33,18 @@
 
 	<modules>
 		<module>spring-cloud-pig-mesh-dependencies</module>
-		<module>spring-cloud-starter-pig-mesh-discovery-client</module>
-		<module>spring-cloud-starter-pig-mesh-discovery-server</module>
+		<module>spring-cloud-pig-mesh-discovery</module>
+		<module>spring-cloud-pig-mesh-examples</module>
 	</modules>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<optional>true</optional>
+		</dependency>
+	</dependencies>
 
 	<dependencyManagement>
 		<dependencies>
