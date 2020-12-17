@@ -2,6 +2,9 @@ package com.pig4cloud.cloud.mesh.discovery.server.store;
 
 import com.pig4cloud.cloud.mesh.discovery.client.annotation.InstanceInfo;
 
+import java.util.List;
+import java.util.Set;
+
 /**
  * @author lengleng
  * @date 2020/12/16
@@ -15,5 +18,16 @@ public interface ServiceStore {
 	 * @param instanceInfo 实例信息
 	 */
 	void registry(InstanceInfo instanceInfo);
+
+	/**
+	 * 获取服务所有实例
+	 * @param serviceId 服务ID
+	 */
+	List<InstanceInfo> instanceInfo(String serviceId);
+
+	/**
+	 * 已注册服务列表
+	 */
+	Set<String> services();
 
 }

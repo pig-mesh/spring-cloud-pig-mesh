@@ -3,10 +3,9 @@ package com.pig4cloud.cloud.mesh.discovery.server.endpoint;
 import com.pig4cloud.cloud.mesh.discovery.client.annotation.InstanceInfo;
 import com.pig4cloud.cloud.mesh.discovery.server.store.ServiceStore;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * @author lengleng
@@ -30,6 +29,11 @@ public class InstanceEndpoint {
 	public String registry(@RequestBody InstanceInfo instance) {
 		serviceStore.registry(instance);
 		return "success";
+	}
+
+	@GetMapping("/list/{serviceId}")
+	public List<InstanceInfo> instanceInfos(@PathVariable String serviceId) {
+		return serviceStore.instanceInfo(serviceId);
 	}
 
 }

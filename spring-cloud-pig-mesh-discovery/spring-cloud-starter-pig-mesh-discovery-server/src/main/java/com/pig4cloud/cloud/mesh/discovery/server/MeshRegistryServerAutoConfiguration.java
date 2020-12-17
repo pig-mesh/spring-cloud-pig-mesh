@@ -1,6 +1,7 @@
 package com.pig4cloud.cloud.mesh.discovery.server;
 
 import com.pig4cloud.cloud.mesh.discovery.server.endpoint.InstanceEndpoint;
+import com.pig4cloud.cloud.mesh.discovery.server.endpoint.ServiceEndpoint;
 import com.pig4cloud.cloud.mesh.discovery.server.store.InMemoryServiceStore;
 import com.pig4cloud.cloud.mesh.discovery.server.store.ServiceStore;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
@@ -24,6 +25,14 @@ public class MeshRegistryServerAutoConfiguration {
 	@Bean
 	public InstanceEndpoint instanceEndpoint(ServiceStore serviceStore) {
 		return new InstanceEndpoint(serviceStore);
+	}
+
+	/**
+	 * 服务端点
+	 */
+	@Bean
+	public ServiceEndpoint serviceEndpoint(ServiceStore serviceStore) {
+		return new ServiceEndpoint(serviceStore);
 	}
 
 	/**

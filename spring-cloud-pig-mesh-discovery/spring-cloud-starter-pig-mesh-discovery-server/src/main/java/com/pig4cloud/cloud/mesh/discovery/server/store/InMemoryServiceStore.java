@@ -8,6 +8,7 @@ import org.springframework.util.CollectionUtils;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -34,9 +35,34 @@ public class InMemoryServiceStore implements ServiceStore {
 		List<InstanceInfo> instanceList = map.get(instanceInfo.getServiceId());
 		if (CollectionUtils.isEmpty(instanceList)) {
 			instanceList = new ArrayList<>();
+			instanceList.add(instanceInfo);
 		}
-		instanceList.add(instanceInfo);
+		else {
+			instanceList.removeIf(info -> info.getHost().equals(instanceInfo.getHost())
+					&& info.getPort().equals(instanceInfo.getPort()));
+			instanceList.add(instanceInfo);
+		}
+
+		// 判断实例是否存在
 		map.put(serviceName, instanceList);
+
+	}
+
+	/**
+	 * 获取服务所有实例
+	 * @param serviceId 服务ID
+	 */
+	@Override
+	public List<InstanceInfo> instanceInfo(String serviceId) {
+		return map.get(serviceId);
+	}
+
+	/**
+	 * 已注册服务列表
+	 */
+	@Override
+	public Set<String> services() {
+		return map.keySet();
 	}
 
 }
