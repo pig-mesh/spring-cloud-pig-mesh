@@ -4,13 +4,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.pig4cloud.cloud</groupId>
-		<artifactId>spring-cloud-pig-mesh-config</artifactId>
+		<artifactId>spring-cloud-pig-mesh-examples</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>spring-cloud-starter-pig-mesh-config-server</artifactId>
-	<name>spring-cloud-starter-pig-mesh-config-server</name>
-	<description>配置中心服务端</description>
+	<artifactId>spring-cloud-starter-pig-mesh-config-server-example</artifactId>
+	<name>spring-cloud-starter-pig-mesh-config-server-example</name>
+	<description>配置中心客户端</description>
 
 	<properties>
 		<java.version>11</java.version>
@@ -19,18 +19,28 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-commons</artifactId>
+			<groupId>com.pig4cloud.cloud</groupId>
+			<artifactId>spring-cloud-starter-pig-mesh-config-server</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-			<scope>provided</scope>
-		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
-			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>

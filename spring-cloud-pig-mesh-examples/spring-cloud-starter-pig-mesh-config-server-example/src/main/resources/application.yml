@@ -1,0 +1,6 @@
+server:
+  port: 52121
+
+spring:
+  application:
+    name: config-server

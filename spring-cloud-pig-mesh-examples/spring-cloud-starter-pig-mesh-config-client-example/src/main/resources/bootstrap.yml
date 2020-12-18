@@ -1,0 +1,10 @@
+server:
+  port: 52153
+
+spring:
+  application:
+    name: config-client
+  cloud:
+    mesh:
+      config:
+        server-addr: http://localhost:52121

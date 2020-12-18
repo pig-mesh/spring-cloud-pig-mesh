@@ -18,6 +18,8 @@
 	</properties>
 
 	<modules>
+		<module>spring-cloud-starter-pig-mesh-config-client-example</module>
+		<module>spring-cloud-starter-pig-mesh-config-server-example</module>
 		<module>spring-cloud-starter-pig-mesh-discovery-client-example</module>
 		<module>spring-cloud-starter-pig-mesh-discovery-server-example</module>
 	</modules>

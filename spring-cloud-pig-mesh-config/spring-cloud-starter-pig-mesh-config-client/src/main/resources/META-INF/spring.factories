@@ -1,1 +1,4 @@
+org.springframework.cloud.bootstrap.BootstrapConfiguration=\
+    com.pig4cloud.cloud.mesh.config.client.MeshConfigBootstrapConfiguration
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    com.pig4cloud.cloud.mesh.config.client.MeshConfigAutoConfiguration
