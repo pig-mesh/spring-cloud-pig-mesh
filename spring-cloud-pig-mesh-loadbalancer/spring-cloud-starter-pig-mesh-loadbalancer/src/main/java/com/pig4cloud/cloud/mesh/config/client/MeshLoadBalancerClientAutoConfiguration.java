@@ -1,6 +1,6 @@
-package com.pig4cloud.cloud.mesh.lb;
+package com.pig4cloud.cloud.mesh.config.client;
 
-import com.pig4cloud.cloud.mesh.lb.client.MeshLoadBalancerClient;
+import com.pig4cloud.cloud.mesh.config.client.client.MeshLoadBalancerClient;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.context.annotation.Bean;
@@ -14,7 +14,8 @@ import org.springframework.context.annotation.Configuration;
 public class MeshLoadBalancerClientAutoConfiguration {
 
 	@Bean
-	public LoadBalancerClient loadBalancerClient(DiscoveryClient discoveryClient){
+	public LoadBalancerClient loadBalancerClient(DiscoveryClient discoveryClient) {
 		return new MeshLoadBalancerClient(discoveryClient);
 	}
+
 }

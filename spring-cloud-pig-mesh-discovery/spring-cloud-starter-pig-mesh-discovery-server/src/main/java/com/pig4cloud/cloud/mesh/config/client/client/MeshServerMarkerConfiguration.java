@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.pig4cloud.cloud.mesh.lb.client;
+package com.pig4cloud.cloud.mesh.config.client.client;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

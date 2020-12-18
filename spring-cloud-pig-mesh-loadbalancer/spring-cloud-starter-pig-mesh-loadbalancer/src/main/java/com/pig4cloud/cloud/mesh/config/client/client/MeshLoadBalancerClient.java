@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.pig4cloud.cloud.mesh.lb.client;
+package com.pig4cloud.cloud.mesh.config.client.client;
 
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
@@ -34,16 +34,15 @@ import static org.springframework.cloud.client.loadbalancer.reactive.ReactiveLoa
  * @author Olga Maciaszek-Sharma
  * @since 2.2.0
  */
-@SuppressWarnings({"unchecked", "rawtypes"})
+@SuppressWarnings({ "unchecked", "rawtypes" })
 @RequiredArgsConstructor
 public class MeshLoadBalancerClient implements LoadBalancerClient {
 
-	private  final DiscoveryClient discoveryClient;
+	private final DiscoveryClient discoveryClient;
 
 	@Override
 	public <T> T execute(String serviceId, LoadBalancerRequest<T> request) throws IOException {
-		DefaultRequest<DefaultRequestContext> lbRequest = new DefaultRequest<>(
-				new DefaultRequestContext(request));
+		DefaultRequest<DefaultRequestContext> lbRequest = new DefaultRequest<>(new DefaultRequestContext(request));
 
 		ServiceInstance serviceInstance = choose(serviceId, lbRequest);
 		if (serviceInstance == null) {
@@ -52,29 +51,27 @@ public class MeshLoadBalancerClient implements LoadBalancerClient {
 		return execute(serviceId, serviceInstance, request);
 	}
 
-
 	@SneakyThrows
 	@Override
-	public <T> T execute(String serviceId, ServiceInstance serviceInstance, LoadBalancerRequest<T> request) throws IOException {
+	public <T> T execute(String serviceId, ServiceInstance serviceInstance, LoadBalancerRequest<T> request)
+			throws IOException {
 		return request.apply(serviceInstance);
 	}
-
 
 	@Override
 	public URI reconstructURI(ServiceInstance instance, URI original) {
 		return LoadBalancerUriTools.reconstructURI(instance, original);
 	}
 
-
 	@Override
 	public ServiceInstance choose(String serviceId) {
 		return choose(serviceId, REQUEST);
 	}
-
 
 	@Override
 	public <T> ServiceInstance choose(String serviceId, Request<T> request) {
 		List<ServiceInstance> instances = discoveryClient.getInstances(serviceId);
 		return instances.get(0);
 	}
+
 }

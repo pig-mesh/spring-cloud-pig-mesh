@@ -1,6 +1,6 @@
-package com.pig4cloud.cloud.mesh.lb.client.annotation;
+package com.pig4cloud.cloud.mesh.config.client.client.annotation;
 
-import com.pig4cloud.cloud.mesh.lb.client.MeshServerMarkerConfiguration;
+import com.pig4cloud.cloud.mesh.config.client.client.MeshServerMarkerConfiguration;
 import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.*;

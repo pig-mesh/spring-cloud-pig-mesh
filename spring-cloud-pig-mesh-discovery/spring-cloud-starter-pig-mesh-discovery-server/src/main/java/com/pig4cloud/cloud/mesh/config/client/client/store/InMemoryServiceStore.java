@@ -1,4 +1,4 @@
-package com.pig4cloud.cloud.mesh.lb.client.store;
+package com.pig4cloud.cloud.mesh.config.client.client.store;
 
 import com.pig4cloud.cloud.mesh.discovery.client.annotation.InstanceInfo;
 import lombok.extern.slf4j.Slf4j;

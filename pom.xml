@@ -33,6 +33,7 @@
 
 	<modules>
 		<module>spring-cloud-pig-mesh-dependencies</module>
+		<module>spring-cloud-pig-mesh-config</module>
 		<module>spring-cloud-pig-mesh-discovery</module>
 		<module>spring-cloud-pig-mesh-loadbalancer</module>
 		<module>spring-cloud-pig-mesh-examples</module>

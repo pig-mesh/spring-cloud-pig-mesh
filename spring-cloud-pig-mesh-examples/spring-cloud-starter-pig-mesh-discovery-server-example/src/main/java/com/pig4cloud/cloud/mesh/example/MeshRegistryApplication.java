@@ -1,6 +1,6 @@
 package com.pig4cloud.cloud.mesh.example;
 
-import com.pig4cloud.cloud.mesh.lb.client.annotation.EnableMeshServer;
+import com.pig4cloud.cloud.mesh.config.client.client.annotation.EnableMeshServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
