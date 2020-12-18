@@ -13,6 +13,7 @@ import org.springframework.cloud.commons.util.InetUtils;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.net.InetAddress;
 import java.util.UUID;
 
 /**
@@ -27,9 +28,9 @@ public class MeshRegistryClientAutoConfiguration {
 
 	@Bean
 	public MeshRegistryRegistration registration(InetUtils inetUtils) {
-		InetUtils.HostInfo hostInfo = inetUtils.findFirstNonLoopbackHostInfo();
 		MeshRegistryRegistration registration = new MeshRegistryRegistration();
-		registration.setHost(hostInfo.getHostname());
+		InetAddress address = inetUtils.findFirstNonLoopbackAddress();
+		registration.setHost(address.getHostAddress());
 		registration.setInstanceId(UUID.randomUUID().toString());
 		return registration;
 	}
