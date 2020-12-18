@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.pig4cloud.cloud.mesh.discovery.server.MeshRegistryServerAutoConfiguration
+  com.pig4cloud.cloud.mesh.lb.client.MeshRegistryServerAutoConfiguration

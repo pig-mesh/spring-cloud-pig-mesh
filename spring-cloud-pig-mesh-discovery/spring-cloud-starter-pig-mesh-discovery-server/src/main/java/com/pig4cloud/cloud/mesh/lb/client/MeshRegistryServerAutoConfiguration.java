@@ -1,9 +1,9 @@
-package com.pig4cloud.cloud.mesh.discovery.server;
+package com.pig4cloud.cloud.mesh.lb.client;
 
-import com.pig4cloud.cloud.mesh.discovery.server.endpoint.InstanceEndpoint;
-import com.pig4cloud.cloud.mesh.discovery.server.endpoint.ServiceEndpoint;
-import com.pig4cloud.cloud.mesh.discovery.server.store.InMemoryServiceStore;
-import com.pig4cloud.cloud.mesh.discovery.server.store.ServiceStore;
+import com.pig4cloud.cloud.mesh.lb.client.endpoint.InstanceEndpoint;
+import com.pig4cloud.cloud.mesh.lb.client.endpoint.ServiceEndpoint;
+import com.pig4cloud.cloud.mesh.lb.client.store.InMemoryServiceStore;
+import com.pig4cloud.cloud.mesh.lb.client.store.ServiceStore;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;

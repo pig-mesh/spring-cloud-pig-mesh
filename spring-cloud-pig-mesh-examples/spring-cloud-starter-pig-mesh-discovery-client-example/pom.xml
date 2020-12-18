@@ -24,8 +24,8 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-loadbalancer</artifactId>
+			<groupId>com.pig4cloud.cloud</groupId>
+			<artifactId>spring-cloud-starter-pig-mesh-loadbalancer</artifactId>
 		</dependency>
 
 		<dependency>

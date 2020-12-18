@@ -53,6 +53,12 @@
 				<artifactId>spring-cloud-starter-pig-mesh-discovery-client</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+
+			<dependency>
+				<groupId>com.pig4cloud.cloud</groupId>
+				<artifactId>spring-cloud-starter-pig-mesh-loadbalancer</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 

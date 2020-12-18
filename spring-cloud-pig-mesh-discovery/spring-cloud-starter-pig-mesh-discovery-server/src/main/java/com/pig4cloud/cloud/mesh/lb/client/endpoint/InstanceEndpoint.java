@@ -1,7 +1,7 @@
-package com.pig4cloud.cloud.mesh.discovery.server.endpoint;
+package com.pig4cloud.cloud.mesh.lb.client.endpoint;
 
 import com.pig4cloud.cloud.mesh.discovery.client.annotation.InstanceInfo;
-import com.pig4cloud.cloud.mesh.discovery.server.store.ServiceStore;
+import com.pig4cloud.cloud.mesh.lb.client.store.ServiceStore;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,4 +1,4 @@
-package com.pig4cloud.cloud.mesh.discovery.server.store;
+package com.pig4cloud.cloud.mesh.lb.client.store;
 
 import com.pig4cloud.cloud.mesh.discovery.client.annotation.InstanceInfo;
 
