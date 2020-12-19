@@ -36,7 +36,7 @@
 		<module>spring-cloud-pig-mesh-config</module>
 		<module>spring-cloud-pig-mesh-discovery</module>
 		<module>spring-cloud-pig-mesh-loadbalancer</module>
-		<module>spring-cloud-pig-mesh-examples</module>
+		<!--<module>spring-cloud-pig-mesh-examples</module>-->
 		<module>spring-cloud-pig-mesh-sidecar</module>
 	</modules>
 
@@ -91,6 +91,14 @@
 			<id>spring-milestones</id>
 			<name>Spring Milestones</name>
 			<url>https://repo.spring.io/milestone</url>
+		</repository>
+		<repository>
+			<id>pig-mesh-snapshots</id>
+			<name>Mesh Snapshots</name>
+			<url>https://nexus.pigx.vip/repository/maven-snapshots</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
 		</repository>
 		<repository>
 			<id>spring-snapshots</id>
