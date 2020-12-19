@@ -44,7 +44,7 @@ public class MeshRegistryDiscovery {
 	 */
 	public List<ServiceInstance> getInstances(String serviceId) {
 		String result = HttpUtil.get(properties.getServerAddr() + "/instance/list/" + serviceId);
-		log.info("mesh registry return {}", result);
+		log.debug("mesh registry return {}", result);
 		return JSONUtil.parseArray(result).toList(InstanceInfo.class).stream().map(info -> new ServiceInstance() {
 			/**
 			 * @return The unique instance ID as registered.
@@ -92,7 +92,7 @@ public class MeshRegistryDiscovery {
 	 */
 	public List<String> getServices() {
 		String result = HttpUtil.get(properties.getServerAddr() + "/service");
-		log.info("mesh registry return {}", result);
+		log.debug("mesh registry return {}", result);
 		return JSONUtil.parseArray(result).toList(String.class);
 	}
 
