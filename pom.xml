@@ -37,6 +37,7 @@
 		<module>spring-cloud-pig-mesh-discovery</module>
 		<module>spring-cloud-pig-mesh-loadbalancer</module>
 		<module>spring-cloud-pig-mesh-examples</module>
+		<module>spring-cloud-pig-mesh-sidecar</module>
 	</modules>
 
 	<dependencies>

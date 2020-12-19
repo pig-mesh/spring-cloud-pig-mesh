@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-   com.pig4cloud.cloud.mesh.config.client.MeshLoadBalancerClientAutoConfiguration
+   com.pig4cloud.cloud.mesh.config.sidecar.MeshLoadBalancerClientAutoConfiguration

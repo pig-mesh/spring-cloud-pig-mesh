@@ -8,9 +8,9 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>spring-cloud-pig-mesh-examples</artifactId>
-	<name>spring-cloud-pig-mesh-examples</name>
-	<description>示例程序</description>
+	<artifactId>spring-cloud-pig-mesh-sidecar</artifactId>
+	<name>spring-cloud-pig-mesh-sidecar</name>
+	<description>已购模块</description>
 	<packaging>pom</packaging>
 
 	<properties>
@@ -18,11 +18,7 @@
 	</properties>
 
 	<modules>
-		<module>spring-cloud-starter-pig-mesh-config-client-example</module>
-		<module>spring-cloud-starter-pig-mesh-config-server-example</module>
-		<module>spring-cloud-starter-pig-mesh-discovery-client-example</module>
-		<module>spring-cloud-starter-pig-mesh-discovery-server-example</module>
-		<module>spring-cloud-starter-pig-mesh-discovery-sidecar-example</module>
+		<module>spring-cloud-starter-pig-mesh-sidecar</module>
 	</modules>
 
 </project>
